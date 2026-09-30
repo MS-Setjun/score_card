@@ -1,0 +1,9 @@
+services:
+  notts-scorecard:
+    build: .
+    container_name: notts-scorecard
+    restart: unless-stopped
+    ports:
+      - "8420:8000"
+    volumes:
+      - ./data:/data
